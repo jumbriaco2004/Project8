@@ -9,8 +9,6 @@ import SpaceJamClasses as spaceJamClasses
 import math, random
 from direct.gui.OnscreenText import OnscreenText
 from panda3d.core import TextNode
-
-
     
 class SpaceJam(ShowBase):
     def __init__(self):
@@ -40,7 +38,6 @@ class SpaceJam(ShowBase):
         self.Sentinal4 = spaceJamClasses.Orbiter(self.loader, self.taskMgr, "./Assets/Drone Defender/DroneDefender.obj", self.render, "Drone", 6.0, "./Assets/Drone Defender/octotoad1_auv.png", self.Planet1, 900, "Cloud", self.Player)
         self.Wanderer1 = spaceJamClasses.Wanderer(self.loader, "./Assets/Drone Defender/DroneDefender.obj", self.render, "Drone", 6.0, "./Assets/Drone Defender/octotoad1_auv.png", self.Player)
         self.Wanderer2 = spaceJamClasses.Wanderer(self.loader, "./Assets/Drone Defender/DroneDefender.obj", self.render, "Drone", 6.0, "./Assets/Drone Defender/octotoad1_auv.png", self.SpaceStation1)
-
 
         self.pusher = CollisionHandlerPusher()
         self.pusher.addCollider(self.Player.collisionNode, self.Player.modelNode)
